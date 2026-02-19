@@ -2,25 +2,194 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+  --surface-base: #ffffff;
+  --surface-alt: #f8fafc;
+  --surface-accent: #f2f6fb;
+  --text-strong: #0f172a;
+  --text-body: #475569;
+  --text-soft: #94a3b8;
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+  --shadow-card: 0 10px 30px -18px rgba(15, 45, 92, 0.24);
+  --shadow-elevated: 0 24px 60px -32px rgba(15, 45, 92, 0.3);
 }
 
 @theme inline {
+  /* Brand Colors - #1B4580 system */
+  --color-primary: #1b4580;
+  --color-primary-light: #2563a8;
+  --color-primary-dark: #0f2d5c;
+  --color-primary-deeper: #091b3d;
+  --color-secondary: #ffffff;
+
+  /* Accent - subtle warm accent for CTAs */
+  --color-accent: #e8b931;
+
+  /* Text Colors */
+  --color-text-primary: #1b4580;
+  --color-text-secondary: #64748b;
+  --color-text-dark: #0f172a;
+  --color-text-muted: #94a3b8;
+  --color-text-strong: var(--text-strong);
+  --color-text-body: var(--text-body);
+  --color-text-soft: var(--text-soft);
+
+  /* Background Colors */
+  --color-bg-light: #f8fafc;
+  --color-bg-cream: #fafbfe;
+  --color-bg-white: #ffffff;
+  --color-surface-base: var(--surface-base);
+  --color-surface-alt: var(--surface-alt);
+  --color-surface-accent: var(--surface-accent);
+
+  /* Semantic */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-sora);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at 100% -20%, rgba(37, 99, 168, 0.05), transparent 36%),
+    radial-gradient(circle at 0% 120%, rgba(27, 69, 128, 0.045), transparent 32%),
+    var(--background);
+  color: var(--text-strong);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+}
+
+/* Display headings use Sora */
+h1, h2, h3 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* Selection */
+::selection {
+  background: #1B4580;
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B4580;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563A8;
+}
+
+/* Noise texture overlay utility */
+.noise-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #1B4580 0%, #2563A8 50%, #1B4580 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.section-shell {
+  @apply py-20 md:py-28;
+}
+
+.section-shell-tight {
+  @apply py-16 md:py-24;
+}
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(27, 69, 128, 0.14) 25%,
+    rgba(27, 69, 128, 0.14) 75%,
+    transparent 100%
+  );
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 1),
+    0 0 0 4px rgba(27, 69, 128, 0.45);
+}
+
+/* Divider line */
+.divider-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #1B4580, #2563A8);
+  border-radius: 2px;
+}
+
+/* Smooth image placeholder shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f8fafc 25%, #eff3f8 50%, #f8fafc 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
