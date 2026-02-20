@@ -1,5 +1,30 @@
 import { cn } from "@/lib/utils";
 
+function TagAccentLine({ light, flip }: { light: boolean; flip?: boolean }) {
+  const color = light ? "rgba(255,255,255,0.35)" : "rgba(27,69,128,0.35)";
+  const highlight = light ? "rgba(255,255,255,0.7)" : "rgba(27,69,128,0.7)";
+  return (
+    <svg
+      width="36"
+      height="6"
+      viewBox="0 0 36 6"
+      fill="none"
+      aria-hidden="true"
+      className="flex-shrink-0"
+      style={flip ? { transform: "scaleX(-1)" } : undefined}
+    >
+      <line x1="0" y1="3" x2="36" y2="3" stroke={color} strokeWidth="1" />
+      {/* Traveling highlight dot */}
+      <circle r="1.5" fill={highlight}>
+        <animateMotion dur="3s" repeatCount="indefinite" path="M0,3 L36,3" />
+        <animate attributeName="opacity" values="0;0.9;0" dur="3s" repeatCount="indefinite" />
+      </circle>
+      {/* End node */}
+      <circle cx="36" cy="3" r="1.5" fill={color} />
+    </svg>
+  );
+}
+
 interface SectionHeadingProps {
   title: string;
   subtitle?: string;
@@ -31,20 +56,14 @@ export default function SectionHeading({
           "mb-5 flex items-center gap-3",
           alignment === "center" && "justify-center"
         )}>
-          <div className={cn(
-            "h-px w-8",
-            light ? "bg-white/30" : "bg-primary/30"
-          )} />
+          <TagAccentLine light={light} flip />
           <span className={cn(
             "text-xs font-semibold uppercase tracking-[0.2em]",
             light ? "text-white/50" : "text-primary/60"
           )}>
             {tag}
           </span>
-          <div className={cn(
-            "h-px w-8",
-            light ? "bg-white/30" : "bg-primary/30"
-          )} />
+          <TagAccentLine light={light} />
         </div>
       )}
 

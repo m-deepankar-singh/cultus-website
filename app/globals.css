@@ -168,6 +168,30 @@ h1, h2, h3 {
   border-radius: 2px;
 }
 
+/* Hero neural network animation */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+/* Seamless logo carousel scroll */
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll var(--scroll-speed, 30s) linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
 /* Smooth image placeholder shimmer */
 @keyframes shimmer {
   0% { background-position: -200% 0; }

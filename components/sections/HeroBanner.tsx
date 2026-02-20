@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { heroStagger, fadeUp } from "@/lib/animations";
 import Button from "@/components/ui/Button";
+import HeroOrbit from "@/components/ui/HeroOrbit";
 import { cn } from "@/lib/utils";
 
 interface HeroBannerProps {
@@ -61,6 +62,9 @@ export default function HeroBanner({
         <div className="absolute top-0 right-[25%] w-px h-full bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
       </div>
 
+      {/* Animated orbital SVG */}
+      <HeroOrbit />
+
       {/* Noise texture */}
       <div className="absolute inset-0 noise-overlay opacity-70" />
 
@@ -75,12 +79,32 @@ export default function HeroBanner({
           animate="visible"
           className="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/[0.02] px-4 sm:px-8 py-8 sm:py-10 backdrop-blur-[2px]"
         >
-          {/* Decorative badge */}
+          {/* Decorative badge with animated signal icon */}
           <motion.div
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-sm mb-8"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/20 bg-white/[0.08] backdrop-blur-sm mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-shrink-0">
+              {/* Broadcasting arcs */}
+              <path d="M8.5 8.5a5 5 0 0 1 7 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.5">
+                <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite" />
+              </path>
+              <path d="M6 6a9 9 0 0 1 12 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.3">
+                <animate attributeName="opacity" values="0.1;0.5;0.1" dur="3s" begin="0.4s" repeatCount="indefinite" />
+              </path>
+              <path d="M3.5 3.5a13 13 0 0 1 17 0" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.15">
+                <animate attributeName="opacity" values="0.05;0.3;0.05" dur="3s" begin="0.8s" repeatCount="indefinite" />
+              </path>
+              {/* Center dot */}
+              <circle cx="12" cy="12" r="2" fill="#E8B931">
+                <animate attributeName="r" values="1.8;2.2;1.8" dur="2s" repeatCount="indefinite" />
+              </circle>
+              {/* Downward connection line */}
+              <line x1="12" y1="14" x2="12" y2="20" stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
+              <circle cx="12" cy="20" r="1.5" fill="white" opacity="0.5">
+                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" />
+              </circle>
+            </svg>
             <span className="text-xs font-medium text-white/70 tracking-widest uppercase font-sans">
               Transforming 221,000+ lives
             </span>

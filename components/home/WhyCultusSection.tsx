@@ -58,7 +58,7 @@ export default function WhyCultusSection() {
           <motion.div variants={fadeUp} className="mt-16 text-center">
             <div className="divider-line mx-auto mb-6" />
             <p className="text-xl md:text-2xl font-semibold text-primary tracking-tight">
-              We don&apos;t just skill. We transform lives.
+              We don&apos;t just train. We transform lives.
             </p>
           </motion.div>
         </motion.div>
