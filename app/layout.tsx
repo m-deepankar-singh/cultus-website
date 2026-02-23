@@ -32,21 +32,12 @@ export const metadata: Metadata = {
     siteName: "Cultus Education",
     locale: "en_IN",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Cultus Education – Bridging Talent To Tomorrow",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cultus Education | Bridging Talent To Tomorrow",
     description:
       "We build tomorrow's workforce by transforming learners into job-ready talent, skilling them for the future and connecting them directly to high-demand careers.",
-    images: ["/og-image.png"],
   },
 };
 
@@ -56,7 +47,7 @@ const organizationSchema = {
   name: "Cultus Education and Technology Services",
   alternateName: "CETS",
   url: "https://cultusedu.com",
-  logo: "https://cultusedu.com/images/Cultus-white (1).png",
+  logo: "https://cultusedu.com/images/Cultus-white%20(1).png",
   description:
     "Cultus Education and Technology Services (CETS) is a workforce skilling platform that trains learners and connects them to high-demand careers across 11 Asian countries.",
   email: "sales@cultusedu.com",
@@ -77,7 +68,18 @@ const organizationSchema = {
       addressCountry: "IN",
     },
   ],
-  sameAs: [],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Cultus Education",
+  url: "https://cultusedu.com",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://cultusedu.com/programs?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export default function RootLayout({
@@ -90,7 +92,9 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationSchema, websiteSchema]),
+          }}
         />
       </head>
       <body className={`${geistSans.variable} ${sora.variable} antialiased`}>

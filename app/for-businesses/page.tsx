@@ -4,6 +4,7 @@ import LogoCarousel from "@/components/ui/LogoCarousel";
 import CTABanner from "@/components/sections/CTABanner";
 import BusinessContent from "./BusinessContent";
 import { PARTNER_LOGOS } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Hire Certified Talent at Zero Recruitment Cost",
@@ -19,6 +20,12 @@ export const metadata: Metadata = {
 export default function ForBusinessesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "For Businesses", href: "/for-businesses" }])),
+        }}
+      />
       <HeroBanner
         headline="The Skills-First Hiring Platform"
         subheadline="Hire smarter with AI-matched, industry-certified talent, backed by a global 5-Star Job Ready Credential and a pipeline trusted by 4,000+ employers."

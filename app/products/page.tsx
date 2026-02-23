@@ -3,6 +3,7 @@ import HeroBanner from "@/components/sections/HeroBanner";
 import CTABanner from "@/components/sections/CTABanner";
 import SkillsCenterStreams from "@/components/products/SkillsCenterStreams";
 import ProductsContent from "./ProductsContent";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Skilling Products & Platforms – Cultus Skills Center",
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Products", href: "/products" }])),
+        }}
+      />
       <HeroBanner
         headline="Technology-Powered Solutions for Scalable Skilling"
         subheadline="From AI-driven job readiness platforms to enterprise-grade skilling ecosystems — explore our suite of products designed to bridge the gap between learning and employment."

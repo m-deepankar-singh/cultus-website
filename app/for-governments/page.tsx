@@ -4,6 +4,7 @@ import LogoCarousel from "@/components/ui/LogoCarousel";
 import CTABanner from "@/components/sections/CTABanner";
 import GovernmentContent from "./GovernmentContent";
 import { PARTNER_LOGOS } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Government Skilling Missions & Workforce Programs",
@@ -19,6 +20,12 @@ export const metadata: Metadata = {
 export default function ForGovernmentsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "For Governments", href: "/for-governments" }])),
+        }}
+      />
       <HeroBanner
         headline="Drive National Growth Through High-Impact, Large-Scale Skilling Missions"
         subheadline="Build a future-ready workforce and achieve measurable socio-economic impact. Cultus partners with government bodies to design, deliver, and scale high-impact skilling programs."

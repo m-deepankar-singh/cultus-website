@@ -3,6 +3,7 @@ import HeroBanner from "@/components/sections/HeroBanner";
 import ContactForm from "@/components/sections/ContactForm";
 import { Mail, MapPin } from "lucide-react";
 import { OFFICES } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Contact Cultus – Partner With Us",
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Contact", href: "/contact" }])),
+        }}
+      />
       <HeroBanner
         headline="Let's Build a Skilled Future Together"
         subheadline="Whether you're looking to transform talent, launch a skilling initiative, or hire ready-to-work professionals — our team is here to partner with you."

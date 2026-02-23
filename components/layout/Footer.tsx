@@ -11,11 +11,11 @@ const quickLinks = [
 ];
 
 const programLinks = [
-  { label: "AI & Data", href: "/programs" },
-  { label: "Finance & Fintech", href: "/programs" },
-  { label: "Technology & Cloud", href: "/programs" },
-  { label: "Green Energy", href: "/programs" },
-  { label: "Bootcamps", href: "/programs" },
+  { label: "AI & Data", href: "/programs#artificial-intelligence-data" },
+  { label: "Finance & Fintech", href: "/programs#finance-fintech" },
+  { label: "Technology & Cloud", href: "/programs#technology-cloud" },
+  { label: "Green Energy", href: "/programs#green-energy" },
+  { label: "Bootcamps", href: "/programs#bootcamps-workshops" },
 ];
 
 const audienceLinks = [

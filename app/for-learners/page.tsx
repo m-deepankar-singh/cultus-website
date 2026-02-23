@@ -6,6 +6,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import LearnersPrograms from "./LearnersPrograms";
 import { LEARNER_FAQS } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Job-Ready Training Programs for Learners",
@@ -37,6 +38,12 @@ export default function ForLearnersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "For Learners", href: "/for-learners" }])),
+        }}
       />
       <HeroBanner
         headline="Your Pathway to a High-Growth Career Starts Here"

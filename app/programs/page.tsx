@@ -4,6 +4,7 @@ import ProgramCard from "@/components/sections/ProgramCard";
 import Accordion from "@/components/ui/Accordion";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { PROGRAMS, PROGRAM_FAQS } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Skilling Programs in AI, Cloud, Green Energy & More",
@@ -36,6 +37,12 @@ export default function ProgramsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Programs", href: "/programs" }])),
+        }}
+      />
       <HeroBanner
         headline="Your Pathway to a High-Growth Career"
         subheadline="Discover industry-aligned programs in AI, Cloud, Green Energy, and more designed to make you job-ready from day one."
@@ -52,7 +59,17 @@ export default function ProgramsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PROGRAMS.map((program, index) => (
-              <ProgramCard key={index} program={program} />
+              <div
+                key={index}
+                id={program.title
+                  .toLowerCase()
+                  .replace(/&/g, "")
+                  .replace(/\s+/g, "-")
+                  .replace(/-+/g, "-")
+                  .replace(/^-|-$/g, "")}
+              >
+                <ProgramCard program={program} />
+              </div>
             ))}
           </div>
         </div>

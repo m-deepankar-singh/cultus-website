@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HeroBanner from "@/components/sections/HeroBanner";
 import CTABanner from "@/components/sections/CTABanner";
 import CareersContent from "./CareersContent";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Careers at Cultus Education",
@@ -17,6 +18,12 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Careers", href: "/careers" }])),
+        }}
+      />
       <HeroBanner
         headline="Shape the Future of Skilling & Employability"
         subheadline="Join a team that's bridging the gap between talent and opportunity. If you're driven by impact, innovation, and the desire to empower learners across the globe, we want you on our mission."

@@ -4,6 +4,7 @@ import StatsGrid from "@/components/sections/StatsGrid";
 import CTABanner from "@/components/sections/CTABanner";
 import AboutContent from "./AboutContent";
 import { ABOUT_STATS } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "About Cultus – India's Workforce Skilling Leader",
@@ -19,6 +20,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "About", href: "/about" }])),
+        }}
+      />
       <HeroBanner
         headline="Cultus stands at the intersection of innovation and opportunity."
         subheadline="We are Cultus Education and Technology Services (CETS), committed to enhancing skilling through technology. Our mission is to offer scalable, outcome-focused solutions to India's critical skilling challenges."

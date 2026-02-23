@@ -5,6 +5,7 @@ import StatsGrid from "@/components/sections/StatsGrid";
 import CTABanner from "@/components/sections/CTABanner";
 import UniversityContent from "./UniversityContent";
 import { UNIVERSITY_STATS, PARTNER_LOGOS } from "@/lib/data";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Boost Graduate Placements with Industry-Aligned Skilling",
@@ -20,6 +21,12 @@ export const metadata: Metadata = {
 export default function ForUniversitiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "For Universities", href: "/for-universities" }])),
+        }}
+      />
       <HeroBanner
         headline="Increase Graduate Placements with Industry-Aligned Skilling"
         subheadline="Integrate Cultus to equip students with in-demand skills and a 5-Star Job Ready Credential, directly connecting them to 4000+ employers."

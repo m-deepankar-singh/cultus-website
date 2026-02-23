@@ -1,14 +1,27 @@
 import type { Metadata } from "next";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Read Cultus Education's Privacy Policy to understand how we collect, use, and protect your personal information.",
+  openGraph: {
+    title: "Privacy Policy",
+    description:
+      "Read Cultus Education's Privacy Policy to understand how we collect, use, and protect your personal information.",
+  },
 };
 
 export default function PrivacyPage() {
   return (
-    <main className="pt-32 pb-24 bg-white">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema([{ name: "Privacy Policy", href: "/privacy" }])),
+        }}
+      />
+      <main className="pt-32 pb-24 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-8">
         <h1 className="text-4xl font-bold text-primary mb-4">Privacy Policy</h1>
         <p className="text-text-secondary mb-10 text-sm">Last updated: February 2025</p>
@@ -109,5 +122,6 @@ export default function PrivacyPage() {
         </div>
       </div>
     </main>
+    </>
   );
 }
