@@ -18,9 +18,6 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cultusworkforce.com"),
-  icons: {
-    icon: "/Cultus Icon.ico",
-  },
   title: {
     default: "Cultus Education | Bridging Talent To Tomorrow",
     template: "%s | Cultus Education",
