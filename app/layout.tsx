@@ -17,7 +17,10 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cultusedu.com"),
+  metadataBase: new URL("https://cultusworkforce.com"),
+  icons: {
+    icon: "/Cultus Icon.ico",
+  },
   title: {
     default: "Cultus Education | Bridging Talent To Tomorrow",
     template: "%s | Cultus Education",
@@ -28,7 +31,7 @@ export const metadata: Metadata = {
     title: "Cultus Education | Bridging Talent To Tomorrow",
     description:
       "We build tomorrow's workforce by transforming learners into job-ready talent, skilling them for the future and connecting them directly to high-demand careers.",
-    url: "https://cultusedu.com",
+    url: "https://cultusworkforce.com",
     siteName: "Cultus Education",
     locale: "en_IN",
     type: "website",
@@ -46,8 +49,8 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Cultus Education and Technology Services",
   alternateName: "CWDS",
-  url: "https://cultusedu.com",
-  logo: "https://cultusedu.com/images/Cultus-white%20(1).png",
+  url: "https://cultusworkforce.com",
+  logo: "https://cultusworkforce.com/images/Cultus-white%20(1).png",
   description:
     "Cultus Workforce Development Services (Pvt) Ltd is a workforce skilling platform that trains learners and connects them to high-demand careers across 11 Asian countries.",
   email: "infosales@cultusworkforceedu.com",
@@ -87,10 +90,10 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Cultus Education",
-  url: "https://cultusedu.com",
+  url: "https://cultusworkforce.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://cultusedu.com/programs?q={search_term_string}",
+    target: "https://cultusworkforce.com/programs?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };

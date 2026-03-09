@@ -242,7 +242,7 @@ export const LEARNER_FAQS: FAQ[] = [
   },
   {
     question: "How can I stay updated on new courses and program openings?",
-    answer: "Follow us on Instagram and LinkedIn for the latest announcements on course launches, enrollment dates, and events, or reach out to our team at support@cultusedu.com for guided enrollment.",
+    answer: "Follow us on Instagram and LinkedIn for the latest announcements on course launches, enrollment dates, and events, or reach out to our team at support@cultusworkforce.com for guided enrollment.",
   },
 ];
 

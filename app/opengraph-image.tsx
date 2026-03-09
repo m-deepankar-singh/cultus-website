@@ -92,7 +92,7 @@ export default async function Image() {
             fontSize: 16,
           }}
         >
-          cultusedu.com
+          cultusworkforce.com
         </div>
       </div>
     ),

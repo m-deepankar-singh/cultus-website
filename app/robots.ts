@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://cultusedu.com/sitemap.xml",
+    sitemap: "https://cultusworkforce.com/sitemap.xml",
   };
 }

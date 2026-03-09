@@ -7,13 +7,13 @@ export function breadcrumbSchema(items: { name: string; href: string }[]) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://cultusedu.com",
+        item: "https://cultusworkforce.com",
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.name,
-        item: `https://cultusedu.com${item.href}`,
+        item: `https://cultusworkforce.com${item.href}`,
       })),
     ],
   };
