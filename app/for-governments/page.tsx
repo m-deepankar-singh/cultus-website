@@ -28,10 +28,19 @@ export default function ForGovernmentsPage() {
       />
       <HeroBanner
         headline="Drive National Growth Through High-Impact, Large-Scale Skilling Missions"
-        subheadline="Build a future-ready workforce and achieve measurable socio-economic impact. Cultus partners with government bodies to design, deliver, and scale high-impact skilling programs."
+        subheadline="Build a future-ready workforce and achieve measurable socio-economic impact. Cultus partners with government bodies to design, deliver, and scale high-impact skilling programs that address critical regional and national employability goals."
         ctaText="Let's Transform Your Skilling Mission"
         ctaHref="/contact"
       />
+
+      {/* Intro text */}
+      <section className="section-shell-tight bg-white section-divider">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 text-center">
+          <p className="text-lg text-text-body leading-relaxed">
+            We partner with ministries, state skill missions, and public institutions to implement large-scale, outcome-driven projects. From flagship national schemes to targeted regional initiatives, our programs transform lives through training, entrepreneurship, and guaranteed employability outcomes.
+          </p>
+        </div>
+      </section>
 
       {/* Government partners */}
       <section className="section-shell-tight bg-white section-divider">

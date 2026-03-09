@@ -248,6 +248,22 @@ export const LEARNER_FAQS: FAQ[] = [
 
 export const OFFICES: Office[] = [
   {
+    city: "Sri Lanka",
+    address: [
+      "No. 70, Lucky Plaza Building",
+      "St. Anthony\u2019s Road",
+      "Colombo 3",
+    ],
+  },
+  {
+    city: "Indonesia",
+    address: [
+      "Kawasan CBD Rasuna Epicentrum - Epiwalk Office Suite",
+      "Jl. HR. Rasuna Said, Karet Kuningan, Setiabudi",
+      "Jakarta Selatan 12940",
+    ],
+  },
+  {
     city: "Bangalore",
     address: [
       "PSP SQUARE, 4th Floor, No 201",
@@ -258,8 +274,7 @@ export const OFFICES: Office[] = [
   {
     city: "Hyderabad",
     address: [
-      "6-3-634, A1&2, II Floor",
-      "Green Channel Apartments",
+      "6-3-634, A1&2, II Floor, Green Channel Apartments",
       "Opposite Lane ICICI Bank, Khairtabad",
       "Hyderabad, Telangana \u2013 500004",
     ],
@@ -366,29 +381,34 @@ export const CHALLENGES_SOLVED = [
     title: "For Learners",
     icon: "GraduationCap",
     challenges: [
-      "Continuous Upskilling \u2013 Access to best-in-class courses from global universities",
-      "Guided Career Pathways \u2013 Career counseling, course identification, and support",
-      "Skill-Based Direction \u2013 Pursue career paths aligned with innate skills",
-      "Industry-Ready Skills \u2013 Latest Industry 4.0 training by industry practitioners",
+      "Continuous Upskilling \u2013 Access to best-in-class courses from global universities and vocational institutes.",
+      "Guided Career Pathways \u2013 Career counselling, course identification, and support for overseas studies.",
+      "Skill-Based Direction \u2013 Helps to identify and pursue career paths aligned with innate skills and competencies.",
+      "Industry-Ready Skills \u2013 Latest Industry 4.0 training\u2014both soft and hard skills\u2014taught by industry practitioners.",
     ],
   },
   {
     title: "For Governments",
     icon: "Landmark",
     challenges: [
-      "Large-Scale Youth Employment \u2013 Nationwide skilling missions",
-      "Regional Skill Gap Mitigation \u2013 Targeted training programs",
-      "CSR & Public Program Alignment \u2013 Measurable socio-economic impact",
-      "Sustainable Livelihood Creation \u2013 Focus on underserved communities",
+      "Large-Scale Youth Employment \u2013 Implementing nationwide skilling missions to enhance employability.",
+      "Regional Skill Gap Mitigation \u2013 Addressing local workforce shortages through targeted training.",
+      "CSR & Public Program Alignment \u2013 Partnering to deliver measurable socio-economic impact through skilling.",
+      "Sustainable Livelihood Creation \u2013 Focusing on marginalised and underserved communities.",
     ],
   },
   {
     title: "For Universities",
     icon: "School",
     challenges: [
-      "Delivering Measurable Outcomes \u2013 Clear ROI on education",
-      "Curriculum Modernization \u2013 Industry-relevant skills integration",
+      "Delivering Measurable Outcomes \u2013 Transforming learners into job-seekers or job-creators with clear ROI.",
+      "Curriculum Modernisation \u2013 Integrating industry-relevant skills not covered in traditional syllabi.",
+      "Industry-Academic Alignment \u2013 Meeting the demand for job-ready, digitally-aware graduates.",
       "Improved University Ranking through enhanced employability metrics",
+      "Access to Industry-Led Internship Programs",
+      "Reduced Student Drop-Out Rates",
+      "Higher Enrollment Numbers driven by better placement outcomes",
+      "Enhanced Academic Staff Performance via industry collaboration",
       "Higher Job Placement Rate \u2013 connecting graduates to 4000+ employers",
     ],
   },
@@ -396,8 +416,8 @@ export const CHALLENGES_SOLVED = [
     title: "For Industry",
     icon: "Building2",
     challenges: [
-      "Talent Readiness \u2013 Graduates productive from day one",
-      "Skill-Specific Hiring \u2013 Candidates trained in latest tools and technologies",
+      "Talent Readiness \u2013 Sourcing graduates who are productive from day one, per industry definitions.",
+      "Skill-Specific Hiring \u2013 Access to candidates trained in the latest tools, technologies, and workplace competencies.",
     ],
   },
 ];

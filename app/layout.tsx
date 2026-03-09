@@ -45,13 +45,26 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Cultus Education and Technology Services",
-  alternateName: "CETS",
+  alternateName: "CWDS",
   url: "https://cultusedu.com",
   logo: "https://cultusedu.com/images/Cultus-white%20(1).png",
   description:
-    "Cultus Education and Technology Services (CETS) is a workforce skilling platform that trains learners and connects them to high-demand careers across 11 Asian countries.",
-  email: "sales@cultusedu.com",
+    "Cultus Workforce Development Services (Pvt) Ltd is a workforce skilling platform that trains learners and connects them to high-demand careers across 11 Asian countries.",
+  email: "infosales@cultusworkforceedu.com",
   address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "No. 70, Lucky Plaza Building, St. Anthony\u2019s Road",
+      addressLocality: "Colombo 3",
+      addressCountry: "LK",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress: "Kawasan CBD Rasuna Epicentrum - Epiwalk Office Suite, Jl. HR. Rasuna Said, Karet Kuningan, Setiabudi",
+      addressLocality: "Jakarta Selatan",
+      postalCode: "12940",
+      addressCountry: "ID",
+    },
     {
       "@type": "PostalAddress",
       streetAddress: "PSP SQUARE, 4th Floor, No 201, Green Glen Layout, Bellandur ORR",

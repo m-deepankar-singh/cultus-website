@@ -121,10 +121,10 @@ export default function TermsPage() {
             <p>
               For questions about these Terms of Service, please contact us at:{" "}
               <a
-                href="mailto:sales@cultusedu.com"
+                href="mailto:infosales@cultusworkforceedu.com"
                 className="text-primary font-medium hover:underline"
               >
-                sales@cultusedu.com
+                infosales@cultusworkforceedu.com
               </a>
             </p>
           </section>

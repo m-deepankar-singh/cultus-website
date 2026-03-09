@@ -61,6 +61,9 @@ export default function ForLearnersPage() {
           />
           <LearnersPrograms />
           <div className="text-center mt-10">
+            <p className="text-text-secondary mb-4">
+              Gain in-demand skills, earn industry-recognized credentials, and connect directly to employers — all in one program.
+            </p>
             <Button href="/programs" size="lg">
               Explore Our Programs
             </Button>

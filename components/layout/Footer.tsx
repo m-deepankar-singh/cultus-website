@@ -120,11 +120,25 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <Mail className="w-3.5 h-3.5 text-white/35" />
                 <a
-                  href="mailto:sales@cultusedu.com"
+                  href="mailto:infosales@cultusworkforceedu.com"
                   className="focus-ring rounded-sm text-sm text-white/65 hover:text-white transition-colors"
                 >
-                  sales@cultusedu.com
+                  infosales@cultusworkforceedu.com
                 </a>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-3.5 h-3.5 text-white/35 mt-0.5 flex-shrink-0" />
+                <div className="text-xs text-white/50 leading-relaxed">
+                  <p className="text-white/70 text-sm mb-0.5">Sri Lanka</p>
+                  <p>Lucky Plaza Building, Colombo 3</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-3.5 h-3.5 text-white/35 mt-0.5 flex-shrink-0" />
+                <div className="text-xs text-white/50 leading-relaxed">
+                  <p className="text-white/70 text-sm mb-0.5">Indonesia</p>
+                  <p>Rasuna Epicentrum, Jakarta Selatan</p>
+                </div>
               </div>
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-3.5 h-3.5 text-white/35 mt-0.5 flex-shrink-0" />
@@ -147,7 +161,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/[0.1] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/35 tracking-wide">
-            &copy; {new Date().getFullYear()} Cultus Education and Technology Services. All rights reserved.
+            &copy; {new Date().getFullYear()} Cultus Workforce Development Services (Pvt) Ltd. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="focus-ring rounded-sm text-xs text-white/40 hover:text-white/70 transition-colors tracking-wide">

@@ -75,7 +75,12 @@ export default function ProductsContent() {
               <p className="text-lg text-text-secondary max-w-3xl mx-auto">
                 Transforming Educators for the Digital Era. A globally-focused
                 online educator empowerment program that elevates teaching
-                quality through digital upskilling.
+                quality through digital upskilling. Designed in alignment with
+                modern educational policies, it equips teachers with the
+                essential digital competencies and pedagogical skills to
+                effectively deliver innovative, digitally-enhanced curriculum,
+                culminating in the internationally recognised Microsoft
+                Certified Educator (MCE) certification.
               </p>
             </motion.div>
 
@@ -92,9 +97,9 @@ export default function ProductsContent() {
               <ul className="space-y-2">
                 {[
                   "Elevate Digital Teaching Skills \u2013 Master modern classroom technology",
-                  "Become a Certified CGM Trainer or Master Trainer \u2013 Lead peer training",
-                  "Train Other Educators in MCE Certification \u2013 Scale digital teaching",
-                  "Earn Microsoft Certified Educator (MCE) & TPC Credentials",
+                  "Become a Certified CGM Trainer or Master Trainer \u2013 Lead peer training initiatives",
+                  "Train Other Educators in MCE Certification \u2013 Scale digital teaching excellence",
+                  "Earn Microsoft Certified Educator (MCE) & TPC Credentials \u2013 Industry-recognized certification",
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-text-dark">
                     <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />

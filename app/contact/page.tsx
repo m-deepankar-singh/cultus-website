@@ -8,11 +8,11 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Contact Cultus – Partner With Us",
   description:
-    "Get in touch with Cultus Education. Reach out for skilling partnerships, talent hiring, government missions, or university collaborations. Offices in Bangalore and Hyderabad.",
+    "Get in touch with Cultus Workforce Development Services. Reach out for skilling partnerships, talent hiring, government missions, or university collaborations. Offices in Sri Lanka, Indonesia, Bangalore and Hyderabad.",
   openGraph: {
     title: "Contact Cultus – Partner With Us",
     description:
-      "Get in touch with Cultus Education. Reach out for skilling partnerships, talent hiring, government missions, or university collaborations. Offices in Bangalore and Hyderabad.",
+      "Get in touch with Cultus Workforce Development Services. Reach out for skilling partnerships, talent hiring, government missions, or university collaborations. Offices in Sri Lanka, Indonesia, Bangalore and Hyderabad.",
   },
 };
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
       />
       <HeroBanner
         headline="Let's Build a Skilled Future Together"
-        subheadline="Whether you're looking to transform talent, launch a skilling initiative, or hire ready-to-work professionals — our team is here to partner with you."
+        subheadline="Whether you're looking to transform talent, launch a skilling initiative, or hire ready-to-work professionals – our team is here to partner with you. Reach out and let's start the conversation."
         ctaText="Send Us a Message"
         ctaHref="#contact-form"
         compact
@@ -61,10 +61,10 @@ export default function ContactPage() {
                       Sales & Partnerships
                     </p>
                     <a
-                      href="mailto:sales@cultusedu.com"
+                      href="mailto:infosales@cultusworkforceedu.com"
                       className="focus-ring text-primary font-semibold hover:text-primary-light transition-colors"
                     >
-                      sales@cultusedu.com
+                      infosales@cultusworkforceedu.com
                     </a>
                   </div>
                 </div>

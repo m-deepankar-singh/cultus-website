@@ -112,10 +112,10 @@ export default function PrivacyPage() {
               If you have any questions about this Privacy Policy or how we handle your data,
               please contact us at:{" "}
               <a
-                href="mailto:sales@cultusedu.com"
+                href="mailto:infosales@cultusworkforceedu.com"
                 className="text-primary font-medium hover:underline"
               >
-                sales@cultusedu.com
+                infosales@cultusworkforceedu.com
               </a>
             </p>
           </section>

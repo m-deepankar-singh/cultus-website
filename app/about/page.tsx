@@ -7,13 +7,13 @@ import { ABOUT_STATS } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About Cultus – India's Workforce Skilling Leader",
+  title: "About Cultus – Workforce Development Services",
   description:
-    "Learn about Cultus Education and Technology Services (CETS) — our mission, methodology, and impact training 221,000+ learners across 11 Asian countries.",
+    "Learn about Cultus Workforce Development Services (Pvt) Ltd — our mission, methodology, and impact training 221,000+ learners across 11 Asian countries.",
   openGraph: {
-    title: "About Cultus – India's Workforce Skilling Leader",
+    title: "About Cultus – Workforce Development Services",
     description:
-      "Learn about Cultus Education and Technology Services (CETS) — our mission, methodology, and impact training 221,000+ learners across 11 Asian countries.",
+      "Learn about Cultus Workforce Development Services (Pvt) Ltd — our mission, methodology, and impact training 221,000+ learners across 11 Asian countries.",
   },
 };
 
@@ -28,7 +28,7 @@ export default function AboutPage() {
       />
       <HeroBanner
         headline="Cultus stands at the intersection of innovation and opportunity."
-        subheadline="We are Cultus Education and Technology Services (CETS), committed to enhancing skilling through technology. Our mission is to offer scalable, outcome-focused solutions to India's critical skilling challenges."
+        subheadline="We are Cultus Workforce Development Services (Pvt) Ltd, committed to enhancing skilling through technology. Our mission is to offer scalable, outcome-focused solutions to India's critical skilling challenges."
         ctaText="Let's Build a Skilled Future Together"
         ctaHref="/contact"
       />

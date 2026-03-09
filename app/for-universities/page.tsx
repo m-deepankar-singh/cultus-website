@@ -58,7 +58,8 @@ export default function ForUniversitiesPage() {
             We surveyed 1,200 HR leaders and senior recruiters across India&apos;s top
             companies to define the 30 essential competencies for a job-ready
             graduate. The Cultus Job Readiness (CJR) program translates this
-            data into a proven pathway.
+            data into a proven pathway. It&apos;s the certification that proves your
+            graduates possess the exact skills employers demand.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             {[
@@ -68,11 +69,11 @@ export default function ForUniversitiesPage() {
               },
               {
                 title: "A Credential That Opens Doors",
-                text: "Students earn the industry-trusted 5-Star Job Ready Badge, recognized by 4,000+ employers.",
+                text: "Students earn the industry-trusted 5-Star Job Ready Badge, a qualification recognized by 4,000+ employers to validate job readiness.",
               },
               {
                 title: "Drive Measurable Placement Outcomes",
-                text: "Join the ecosystem that achieves a 93% placement rate for eligible learners.",
+                text: "Join the ecosystem that achieves a 93% placement rate for eligible learners, transforming academic potential into career success.",
               },
             ].map((item, i) => (
               <div key={i} className="bg-bg-light rounded-xl p-6 border border-primary/10">

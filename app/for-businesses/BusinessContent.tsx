@@ -45,6 +45,7 @@ export default function BusinessContent() {
         </motion.div>
 
         <div className="text-center">
+          <p className="text-text-secondary mb-4">Cut hiring costs. Hire certified talent.</p>
           <Button href="/contact" size="lg">
             Connect with Our Team Now
           </Button>

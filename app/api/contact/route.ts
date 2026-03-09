@@ -35,7 +35,7 @@ export async function POST(request: Request) {
 
     const { data, error } = await resend.emails.send({
       from: "Cultus Website Contact Form <noreply@cultusskillscenter.com>",
-      to: ["sales@cultusedu.com"],
+      to: ["infosales@cultusworkforceedu.com"],
       replyTo: body.email,
       subject: `New Contact Form Submission from ${body.name}`,
       html: `

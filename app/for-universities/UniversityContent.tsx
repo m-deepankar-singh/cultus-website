@@ -30,7 +30,7 @@ export default function UniversityContent() {
       <div className="max-w-5xl mx-auto px-4 sm:px-8">
         <SectionHeading
           title="Transform Your Graduates into Industry 4.0-Ready Talent"
-          subtitle="Partner with Cultus to elevate your institution's reputation and graduate outcomes by embedding industry-aligned, outcome-driven skilling directly into your curriculum."
+          subtitle="Partner with Cultus to elevate your institution's reputation and graduate outcomes by embedding industry-aligned, outcome-driven skilling directly into your curriculum. We equip students with in-demand skills, a recognized global credential, and direct industry connections."
         />
 
         <motion.div
