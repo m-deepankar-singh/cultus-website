@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 interface LogoCarouselProps {
@@ -11,7 +12,7 @@ interface LogoCarouselProps {
 export default function LogoCarousel({
   logos,
   className,
-  speed = 30,
+  speed = 60,
 }: LogoCarouselProps) {
   return (
     <div
@@ -27,9 +28,16 @@ export default function LogoCarousel({
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={index}
-            className="flex-shrink-0 h-10 flex items-center justify-center text-text-secondary/40 hover:text-text-secondary/70 transition-colors duration-300"
-            dangerouslySetInnerHTML={{ __html: logo }}
-          />
+            className="flex-shrink-0 h-12 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          >
+            <Image
+              src={logo}
+              alt={`Partner ${(index % logos.length) + 1}`}
+              width={120}
+              height={48}
+              className="h-10 w-auto object-contain"
+            />
+          </div>
         ))}
       </div>
     </div>
