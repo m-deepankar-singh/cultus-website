@@ -120,10 +120,10 @@ export default function Footer() {
               <div className="flex items-center gap-2.5">
                 <Mail className="w-3.5 h-3.5 text-white/35" />
                 <a
-                  href="mailto:infosales@cultusworkforceedu.com"
+                  href="mailto:info@cultusworkforce.com"
                   className="focus-ring rounded-sm text-sm text-white/65 hover:text-white transition-colors"
                 >
-                  infosales@cultusworkforceedu.com
+                  info@cultusworkforce.com
                 </a>
               </div>
               <div className="flex items-start gap-2.5">

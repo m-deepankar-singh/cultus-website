@@ -53,7 +53,7 @@ const organizationSchema = {
   logo: "https://cultusworkforce.com/images/Cultus-white%20(1).png",
   description:
     "Cultus Workforce Development Services (Pvt) Ltd is a workforce skilling platform that trains learners and connects them to high-demand careers across 11 Asian countries.",
-  email: "infosales@cultusworkforceedu.com",
+  email: "info@cultusworkforce.com",
   address: [
     {
       "@type": "PostalAddress",

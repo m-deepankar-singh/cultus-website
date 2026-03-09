@@ -61,10 +61,10 @@ export default function ContactPage() {
                       Sales & Partnerships
                     </p>
                     <a
-                      href="mailto:infosales@cultusworkforceedu.com"
+                      href="mailto:info@cultusworkforce.com"
                       className="focus-ring text-primary font-semibold hover:text-primary-light transition-colors"
                     >
-                      infosales@cultusworkforceedu.com
+                      info@cultusworkforce.com
                     </a>
                   </div>
                 </div>
