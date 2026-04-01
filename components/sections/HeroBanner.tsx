@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { heroStagger, fadeUp } from "@/lib/animations";
 import Button from "@/components/ui/Button";
 import HeroOrbit from "@/components/ui/HeroOrbit";
@@ -14,6 +15,8 @@ interface HeroBannerProps {
   ctaHref: string;
   compact?: boolean;
   className?: string;
+  logoSrc?: string;
+  logoAlt?: string;
 }
 
 export default function HeroBanner({
@@ -23,6 +26,8 @@ export default function HeroBanner({
   ctaHref,
   compact = false,
   className,
+  logoSrc,
+  logoAlt,
 }: HeroBannerProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -110,12 +115,25 @@ export default function HeroBanner({
             </span>
           </motion.div>
 
-          <motion.h1
-            variants={fadeUp}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold text-white tracking-[-0.04em] leading-[0.95]"
-          >
-            {headline}
-          </motion.h1>
+          {logoSrc ? (
+            <motion.div variants={fadeUp} className="flex justify-center">
+              <Image
+                src={logoSrc}
+                alt={logoAlt || headline}
+                width={320}
+                height={100}
+                className="h-auto w-auto max-w-[280px] sm:max-w-[320px] md:max-w-[380px] object-contain brightness-0 invert"
+                priority
+              />
+            </motion.div>
+          ) : (
+            <motion.h1
+              variants={fadeUp}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold text-white tracking-[-0.04em] leading-[0.95]"
+            >
+              {headline}
+            </motion.h1>
+          )}
 
           <motion.p
             variants={fadeUp}

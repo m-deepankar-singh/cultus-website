@@ -6,9 +6,15 @@ export const NAV_ITEMS: NavItem[] = [
     href: "#",
     children: [
       { label: "About Us", href: "/about" },
-      { label: "Programs", href: "/programs" },
       { label: "Products", href: "/products" },
       { label: "Careers", href: "/careers" },
+    ],
+  },
+  {
+    label: "Programs",
+    href: "/programs",
+    children: [
+      { label: "AWS re/Start", href: "/programs/aws-restart" },
     ],
   },
   { label: "For Learners", href: "/for-learners" },
@@ -465,6 +471,138 @@ export const GOVERNMENT_VALUE_PROPS = [
     icon: "Rocket",
   },
 ];
+
+export const AWS_RESTART_DATA = {
+  hero: {
+    headline: "AWS re/Start",
+    subheadline:
+      "A free competency development program that can enhance your career in the Cloud Computing field.",
+  },
+  cultusWay: [
+    {
+      step: "01",
+      title: "Define",
+      description: "Identify your career goals and assess your current skill level to build a tailored learning journey.",
+      icon: "Target",
+    },
+    {
+      step: "02",
+      title: "Optimize",
+      description: "Sharpen your technical and behavioral skills through hands-on labs, real-world scenarios, and expert guidance.",
+      icon: "Settings",
+    },
+    {
+      step: "03",
+      title: "Certify",
+      description: "Prepare for and earn the AWS Certified Cloud Practitioner certification to validate your expertise.",
+      icon: "Award",
+    },
+    {
+      step: "04",
+      title: "Showcase",
+      description: "Present your skills to hiring partners and connect with employers seeking cloud-ready talent.",
+      icon: "Sparkles",
+    },
+  ],
+  overview: {
+    title: "Building a Career in Technology with AWS re/Start",
+    description:
+      "AWS re/Start cooperated with Cultus Education to offer this free program online, so you can access it anywhere. Using case scenario-based learning methods, practical laboratories, and assignments, students will gain the skills needed for entry-level careers in cloud computing. The program also includes self-development modules to make you workplace-ready.",
+  },
+  eligibility: {
+    title: "Who Is This Program For?",
+    items: [
+      "Those seeking entry-level jobs in Cloud and IT Sector",
+      "Holders of a Diploma or Bachelor Degree",
+      "Available for 3.5 hours of e-classroom learning during day or evening from Monday to Saturday",
+      "1–2 years' work experience, preferably in IT sector is highly recommended",
+      "Ready to work immediately if offered a job after completing the training",
+      "Willing to relocate, if required",
+    ],
+  },
+  requirements: {
+    title: "Technical Requirements",
+    items: [
+      "A stable internet connection",
+      "Internal/external webcam, mic, and speaker",
+      "Intel Processor i3/AMD 3, RAM 4GB, 500 GB hard drive",
+    ],
+  },
+  benefits: [
+    {
+      icon: "GraduationCap",
+      title: "Free Training on Current & Future Skills",
+      description:
+        "Training for in-demand cloud computing skills is absolutely free. Your first step to unlocking a new career path in IT.",
+    },
+    {
+      icon: "FlaskConical",
+      title: "Real Scenario-Based Practicing",
+      description:
+        "Complete real scenario-based learning, hands-on practice, and courses to prepare for a career in Cloud computing.",
+    },
+    {
+      icon: "Award",
+      title: "Global Certification",
+      description:
+        "After completing the training, you will be eligible to take the AWS Certified Cloud Practitioner Exam.",
+    },
+    {
+      icon: "Briefcase",
+      title: "Placement Opportunities",
+      description:
+        "We will work and assist you with placement opportunities so you can start your career in cloud computing.",
+    },
+  ],
+  technicalSkills: [
+    "AWS Cloud Practitioner Certification Preparation",
+    "AWS Cloud Core Services & Architecture",
+    "Programming Languages for Cloud Development",
+    "Cloud Security Fundamentals",
+    "Networking & Infrastructure Basics",
+    "Linux & Command Line Essentials",
+  ],
+  behavioralSkills: [
+    "Time Management",
+    "Team Work",
+    "Problem Solving",
+    "Effective Communication",
+    "Critical Thinking",
+    "Interview Preparation",
+  ],
+  faqs: [
+    {
+      question: "Is the AWS re/Start program really free?",
+      answer:
+        "Yes, the AWS re/Start program is completely free for eligible learners. There are no tuition fees or hidden costs. AWS sponsors the program to develop cloud computing talent globally.",
+    },
+    {
+      question: "How long does the program take to complete?",
+      answer:
+        "The program runs for approximately 12 weeks with 3.5 hours of e-classroom learning per day, Monday to Saturday. You can choose day or evening sessions based on your availability.",
+    },
+    {
+      question: "Do I need prior IT experience to enroll?",
+      answer:
+        "While 1–2 years of work experience (preferably in IT) is recommended, it is not mandatory. The program is designed for individuals seeking entry-level positions in cloud computing.",
+    },
+    {
+      question: "What certification will I receive after completing the program?",
+      answer:
+        "Upon completion, you will be prepared to take the AWS Certified Cloud Practitioner exam. This is a globally recognized certification that validates your understanding of AWS Cloud fundamentals.",
+    },
+    {
+      question: "Will I get help finding a job after the program?",
+      answer:
+        "Yes. Cultus provides placement assistance including connecting you with our network of 4,000+ hiring partners, interview preparation, resume building, and career guidance.",
+    },
+    {
+      question: "Is the program conducted online or in-person?",
+      answer:
+        "The program is delivered online, so you can access it from anywhere with a stable internet connection and the required technical specifications.",
+    },
+  ] as FAQ[],
+};
 
 export const BUSINESS_VALUE_PROPS = [
   {
