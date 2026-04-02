@@ -123,7 +123,7 @@ export default function HeroBanner({
                 width={500}
                 height={150}
                 unoptimized
-                className="w-[240px] sm:w-[320px] md:w-[380px] lg:w-[440px] h-auto object-contain brightness-0 invert"
+                className="w-[168px] sm:w-[224px] md:w-[266px] lg:w-[308px] h-auto object-contain brightness-0 invert"
                 priority
               />
             </motion.div>

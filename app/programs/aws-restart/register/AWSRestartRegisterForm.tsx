@@ -153,13 +153,13 @@ export default function AWSRestartRegisterForm() {
       className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm border border-gray-100 space-y-5 overflow-hidden"
     >
       {/* AWS Logo */}
-      <div className="flex justify-center mb-2">
+      <div className="flex justify-center mb-2 -mx-4 sm:-mx-6 md:-mx-8 -mt-4 sm:-mt-6 md:-mt-8 pt-6 pb-4 bg-gradient-to-br from-primary to-primary-dark rounded-t-2xl">
         <Image
           src="/images/programs/AWS_Restart_Logo_RGB.png"
           alt="AWS re/Start Program"
           width={200}
           height={65}
-          className="object-contain"
+          className="object-contain brightness-0 invert"
         />
       </div>
 

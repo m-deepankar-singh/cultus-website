@@ -111,9 +111,9 @@ export default function AWSRestartContent() {
               className="relative"
             >
               {/* AWS re/Start logo + program details */}
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/[0.06] to-primary/[0.02] border border-primary/10 p-8 md:p-10">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-[60px]" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/10 rounded-full blur-[50px]" />
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary to-primary-dark border border-white/10 p-8 md:p-10">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-full blur-[60px]" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full blur-[50px]" />
 
                 {/* AWS re/Start Logo */}
                 <div className="relative flex justify-center mb-8">
@@ -122,7 +122,7 @@ export default function AWSRestartContent() {
                     alt="AWS re/Start Program"
                     width={240}
                     height={80}
-                    className="object-contain"
+                    className="object-contain brightness-0 invert"
                   />
                 </div>
 
@@ -136,12 +136,12 @@ export default function AWSRestartContent() {
                   ].map((item) => (
                     <div
                       key={item.label}
-                      className="flex items-center justify-between py-3 border-b border-primary/[0.06] last:border-0"
+                      className="flex items-center justify-between py-3 border-b border-white/10 last:border-0"
                     >
-                      <span className="text-sm font-medium text-text-secondary">
+                      <span className="text-sm font-medium text-white/70">
                         {item.label}
                       </span>
-                      <span className="text-sm font-semibold text-primary">
+                      <span className="text-sm font-semibold text-white">
                         {item.value}
                       </span>
                     </div>
