@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "next-dev",
-      "runtimeExecutable": "bun",
+      "runtimeExecutable": "/Users/deepankarsingh1312/.bun/bin/bun",
       "runtimeArgs": ["dev"],
       "port": 3000
     }

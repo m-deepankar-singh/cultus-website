@@ -120,9 +120,10 @@ export default function HeroBanner({
               <Image
                 src={logoSrc}
                 alt={logoAlt || headline}
-                width={320}
-                height={100}
-                className="h-auto w-auto max-w-[280px] sm:max-w-[320px] md:max-w-[380px] object-contain brightness-0 invert"
+                width={500}
+                height={150}
+                unoptimized
+                className="w-[240px] sm:w-[320px] md:w-[380px] lg:w-[440px] h-auto object-contain brightness-0 invert"
                 priority
               />
             </motion.div>

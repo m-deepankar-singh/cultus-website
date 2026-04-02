@@ -51,7 +51,6 @@ export default function AWSRestartPage() {
         subheadline={AWS_RESTART_DATA.hero.subheadline}
         ctaText="Apply Now — It's Free"
         ctaHref="/programs/aws-restart/register#register"
-        compact
         logoSrc="/images/programs/AWS_Restart_Logo_RGB.png"
         logoAlt="AWS re/Start Program"
       />

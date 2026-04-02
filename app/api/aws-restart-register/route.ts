@@ -9,7 +9,8 @@ interface AWSRestartFormData {
   email: string;
   gender: string;
   age: string;
-  state: string;
+  district: string;
+  province: string;
   previouslyJoined: string;
   hasComputer: string;
   englishProficiency: string;
@@ -79,7 +80,8 @@ export async function POST(request: Request) {
         email: body.email,
         gender: body.gender,
         age: body.age,
-        state: body.state || null,
+        district: body.district || null,
+        province: body.province || null,
         previously_joined: body.previouslyJoined,
         has_computer: body.hasComputer,
         english_proficiency: body.englishProficiency,
@@ -125,8 +127,12 @@ export async function POST(request: Request) {
               <td style="padding: 8px 12px; color: #1f2937;">${escapeHtml(body.age)}</td>
             </tr>
             <tr style="background-color: #f9fafb;">
-              <td style="padding: 8px 12px; font-weight: bold; color: #374151;">State</td>
-              <td style="padding: 8px 12px; color: #1f2937;">${body.state ? escapeHtml(body.state) : "—"}</td>
+              <td style="padding: 8px 12px; font-weight: bold; color: #374151;">District</td>
+              <td style="padding: 8px 12px; color: #1f2937;">${body.district ? escapeHtml(body.district) : "—"}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; font-weight: bold; color: #374151;">Province</td>
+              <td style="padding: 8px 12px; color: #1f2937;">${body.province ? escapeHtml(body.province) : "—"}</td>
             </tr>
             <tr>
               <td style="padding: 8px 12px; font-weight: bold; color: #374151;">Previously Joined AWS re/Start</td>

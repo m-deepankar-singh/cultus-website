@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="mb-14 md:mb-16 pt-10">
           <Link href="/" className="focus-ring inline-block rounded-sm">
             <Image
-              src="/images/Cultus-white (1).png"
+              src="/images/Cultus Workforce Logo White.png"
               alt="Cultus – Skilling & Jobtech"
               width={160}
               height={46}

@@ -14,7 +14,8 @@ interface FormData {
   email: string;
   gender: string;
   age: string;
-  state: string;
+  district: string;
+  province: string;
   previouslyJoined: string;
   hasComputer: string;
   englishProficiency: string;
@@ -61,7 +62,8 @@ export default function AWSRestartRegisterForm() {
     email: "",
     gender: "",
     age: "",
-    state: "",
+    district: "",
+    province: "",
     previouslyJoined: "",
     hasComputer: "",
     englishProficiency: "",
@@ -260,17 +262,69 @@ export default function AWSRestartRegisterForm() {
         </div>
       </motion.div>
 
-      {/* State */}
-      <motion.div variants={fadeUp}>
-        <label className={labelClasses}>State</label>
-        <input
-          type="text"
-          name="state"
-          value={formData.state}
-          onChange={handleChange}
-          className={inputClasses}
-          placeholder="Your state"
-        />
+      {/* District & Province */}
+      <motion.div
+        variants={fadeUp}
+        className="grid grid-cols-1 sm:grid-cols-2 gap-5"
+      >
+        <div>
+          <label className={labelClasses}>District *</label>
+          <select
+            name="district"
+            required
+            value={formData.district}
+            onChange={handleChange}
+            className={inputClasses}
+          >
+            <option value="">Select district</option>
+            <option value="Colombo">Colombo</option>
+            <option value="Gampaha">Gampaha</option>
+            <option value="Kalutara">Kalutara</option>
+            <option value="Kandy">Kandy</option>
+            <option value="Matale">Matale</option>
+            <option value="Nuwara Eliya">Nuwara Eliya</option>
+            <option value="Galle">Galle</option>
+            <option value="Matara">Matara</option>
+            <option value="Hambantota">Hambantota</option>
+            <option value="Jaffna">Jaffna</option>
+            <option value="Kilinochchi">Kilinochchi</option>
+            <option value="Mannar">Mannar</option>
+            <option value="Vavuniya">Vavuniya</option>
+            <option value="Mullaitivu">Mullaitivu</option>
+            <option value="Trincomalee">Trincomalee</option>
+            <option value="Batticaloa">Batticaloa</option>
+            <option value="Ampara">Ampara</option>
+            <option value="Kurunegala">Kurunegala</option>
+            <option value="Puttalam">Puttalam</option>
+            <option value="Anuradhapura">Anuradhapura</option>
+            <option value="Polonnaruwa">Polonnaruwa</option>
+            <option value="Badulla">Badulla</option>
+            <option value="Monaragala">Monaragala</option>
+            <option value="Ratnapura">Ratnapura</option>
+            <option value="Kegalle">Kegalle</option>
+          </select>
+        </div>
+        <div>
+          <label className={labelClasses}>Province *</label>
+          <select
+            name="province"
+            required
+            value={formData.province}
+            onChange={handleChange}
+            className={inputClasses}
+          >
+            <option value="">Select province</option>
+            <option value="Western Province">Western Province</option>
+            <option value="Central Province">Central Province</option>
+            <option value="Southern Province">Southern Province</option>
+            <option value="Northern Province">Northern Province</option>
+            <option value="Eastern Province">Eastern Province</option>
+            <option value="North Western Province">North Western Province</option>
+            <option value="North Central Province">North Central Province</option>
+            <option value="Uva Province">Uva Province</option>
+            <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+          </select>
+        </div>
       </motion.div>
 
       {/* Previously Joined */}
@@ -405,6 +459,8 @@ export default function AWSRestartRegisterForm() {
             formData.email.trim() !== "" &&
             formData.gender !== "" &&
             formData.age !== "" &&
+            formData.district !== "" &&
+            formData.province !== "" &&
             formData.previouslyJoined !== "" &&
             formData.hasComputer !== "" &&
             formData.englishProficiency !== "" &&

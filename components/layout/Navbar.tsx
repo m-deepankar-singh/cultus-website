@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="focus-ring relative z-10 rounded-sm">
             <Image
-              src="/images/Cultus-white (1).png"
+              src="/images/Cultus Workforce Logo White.png"
               alt="Cultus – Skilling & Jobtech"
               width={140}
               height={40}
