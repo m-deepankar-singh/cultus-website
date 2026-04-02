@@ -41,7 +41,7 @@ export default function AWSRestartPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Programs", href: "/programs" },
-              { name: "AWS re/Start", href: "/programs/aws-restart" },
+              { name: "AWS re/Start", href: "/programs/aws-restart-srilanka" },
             ])
           ),
         }}
@@ -49,8 +49,8 @@ export default function AWSRestartPage() {
       <HeroBanner
         headline={AWS_RESTART_DATA.hero.headline}
         subheadline={AWS_RESTART_DATA.hero.subheadline}
-        ctaText="Apply Now — It's Free"
-        ctaHref="/programs/aws-restart/register#register"
+        ctaText="Start Now – Your Introductory Offer is Absolutely Free!"
+        ctaHref="/programs/aws-restart-srilanka/register#register"
         logoSrc="/images/programs/AWS_Restart_Logo_RGB.png"
         logoAlt="AWS re/Start Program"
       />

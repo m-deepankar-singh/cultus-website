@@ -9,6 +9,7 @@ interface AWSRestartFormData {
   email: string;
   gender: string;
   age: string;
+  educationalBackground: string;
   district: string;
   province: string;
   previouslyJoined: string;
@@ -80,6 +81,7 @@ export async function POST(request: Request) {
         email: body.email,
         gender: body.gender,
         age: body.age,
+        educational_background: body.educationalBackground || null,
         district: body.district || null,
         province: body.province || null,
         previously_joined: body.previouslyJoined,
@@ -127,6 +129,10 @@ export async function POST(request: Request) {
               <td style="padding: 8px 12px; color: #1f2937;">${escapeHtml(body.age)}</td>
             </tr>
             <tr style="background-color: #f9fafb;">
+              <td style="padding: 8px 12px; font-weight: bold; color: #374151;">Educational Background</td>
+              <td style="padding: 8px 12px; color: #1f2937;">${body.educationalBackground ? escapeHtml(body.educationalBackground) : "—"}</td>
+            </tr>
+            <tr>
               <td style="padding: 8px 12px; font-weight: bold; color: #374151;">District</td>
               <td style="padding: 8px 12px; color: #1f2937;">${body.district ? escapeHtml(body.district) : "—"}</td>
             </tr>

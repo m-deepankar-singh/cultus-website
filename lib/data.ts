@@ -14,7 +14,7 @@ export const NAV_ITEMS: NavItem[] = [
     label: "Programs",
     href: "/programs",
     children: [
-      { label: "AWS re/Start", href: "/programs/aws-restart" },
+      { label: "AWS re/Start Sri Lanka", href: "/programs/aws-restart-srilanka" },
     ],
   },
   { label: "For Learners", href: "/for-learners" },

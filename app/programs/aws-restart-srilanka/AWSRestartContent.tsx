@@ -15,7 +15,20 @@ import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Accordion from "@/components/ui/Accordion";
 import { getIcon } from "@/lib/utils";
-import { CheckCircle, Monitor, Wifi, Cpu, ChevronRight } from "lucide-react";
+import {
+  CheckCircle,
+  Monitor,
+  Wifi,
+  Cpu,
+  ChevronRight,
+  ClipboardList,
+  MessageSquare,
+  Users,
+  Settings,
+  Handshake,
+  GraduationCap,
+  Rocket,
+} from "lucide-react";
 
 const {
   cultusWay,
@@ -97,7 +110,7 @@ export default function AWSRestartContent() {
                 {overview.description}
               </p>
               <div className="mt-8">
-                <Button href="/programs/aws-restart/register#register" size="lg" arrow>
+                <Button href="/programs/aws-restart-srilanka/register#register" size="lg" arrow>
                   Apply Now
                 </Button>
               </div>
@@ -131,7 +144,6 @@ export default function AWSRestartContent() {
                     { label: "Duration", value: "12 Weeks" },
                     { label: "Format", value: "Online / Live Classes" },
                     { label: "Schedule", value: "3.5 hrs/day, Mon–Sat" },
-                    { label: "Cost", value: "Completely Free" },
                     { label: "Certification", value: "AWS Cloud Practitioner" },
                   ].map((item) => (
                     <div
@@ -191,6 +203,97 @@ export default function AWSRestartContent() {
                 </motion.div>
               );
             })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Registration Steps */}
+      <section className="section-shell bg-bg-light section-divider">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <SectionHeading
+            tag="How It Works"
+            title="Registration Steps"
+            subtitle="Your journey from application to career — here's what to expect."
+          />
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="relative"
+          >
+            {/* Horizontal connector line - desktop only */}
+            <div className="hidden lg:block absolute top-[3.25rem] left-[calc(100%/14)] right-[calc(100%/14)] h-1 bg-gradient-to-r from-primary/20 via-primary to-primary/20 rounded-full z-0" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-6 lg:gap-3">
+              {[
+                {
+                  icon: ClipboardList,
+                  title: "Registration",
+                  subtitle: "No academic engineering background needed",
+                },
+                {
+                  icon: MessageSquare,
+                  title: "Interview",
+                  subtitle: "A brief conversation to understand your goals",
+                },
+                {
+                  icon: Users,
+                  title: "Orientation Session",
+                  subtitle: "Get introduced to the program structure",
+                },
+                {
+                  icon: Settings,
+                  title: "Learning Process",
+                  subtitle: "12 weeks of hands-on cloud training",
+                },
+                {
+                  icon: Handshake,
+                  title: "Employer Meetings",
+                  subtitle: "Interviews with prospective employers",
+                },
+                {
+                  icon: GraduationCap,
+                  title: "Graduation",
+                  subtitle: "Earn your AWS Cloud Practitioner certification",
+                },
+                {
+                  icon: Rocket,
+                  title: "Career Launch",
+                  subtitle: "Start your newest & best career journey",
+                },
+              ].map((step, i) => {
+                const StepIcon = step.icon;
+                return (
+                  <motion.div
+                    key={step.title}
+                    variants={fadeUp}
+                    className="flex flex-col items-center text-center relative z-10"
+                  >
+                    {/* Circle with icon */}
+                    <div className="w-[4.25rem] h-[4.25rem] rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/25 ring-4 ring-white mb-4">
+                      <StepIcon className="w-7 h-7 text-white" />
+                    </div>
+
+                    {/* Step number */}
+                    <span className="text-xs font-bold text-primary/40 mb-1">
+                      STEP {i + 1}
+                    </span>
+
+                    {/* Title */}
+                    <h4 className="text-sm font-bold text-text-dark leading-snug mb-1">
+                      {step.title}
+                    </h4>
+
+                    {/* Subtitle */}
+                    <p className="text-xs text-text-secondary leading-relaxed max-w-[140px]">
+                      {step.subtitle}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
           </motion.div>
         </div>
       </section>
@@ -377,7 +480,7 @@ export default function AWSRestartContent() {
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Button
-              href="/programs/aws-restart/register#register"
+              href="/programs/aws-restart-srilanka/register#register"
               variant="secondary"
               size="lg"
               arrow

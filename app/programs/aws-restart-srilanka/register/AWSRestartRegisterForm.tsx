@@ -14,6 +14,7 @@ interface FormData {
   email: string;
   gender: string;
   age: string;
+  educationalBackground: string;
   district: string;
   province: string;
   previouslyJoined: string;
@@ -62,6 +63,7 @@ export default function AWSRestartRegisterForm() {
     email: "",
     gender: "",
     age: "",
+    educationalBackground: "",
     district: "",
     province: "",
     previouslyJoined: "",
@@ -135,7 +137,7 @@ export default function AWSRestartRegisterForm() {
           review your application and get back to you shortly.
         </p>
         <div className="mt-6">
-          <Button href="/programs/aws-restart" variant="outline">
+          <Button href="/programs/aws-restart-srilanka" variant="outline">
             Back to AWS re/Start
           </Button>
         </div>
@@ -260,6 +262,23 @@ export default function AWSRestartRegisterForm() {
             <option value="65 or over">65 or over</option>
           </select>
         </div>
+      </motion.div>
+
+      {/* Educational Background */}
+      <motion.div variants={fadeUp}>
+        <label className={labelClasses}>Educational Background *</label>
+        <select
+          name="educationalBackground"
+          required
+          value={formData.educationalBackground}
+          onChange={handleChange}
+          className={inputClasses}
+        >
+          <option value="">Select</option>
+          <option value="Graduate">Graduate</option>
+          <option value="Post Graduate">Post Graduate</option>
+          <option value="Others">Others</option>
+        </select>
       </motion.div>
 
       {/* District & Province */}
@@ -459,6 +478,7 @@ export default function AWSRestartRegisterForm() {
             formData.email.trim() !== "" &&
             formData.gender !== "" &&
             formData.age !== "" &&
+            formData.educationalBackground !== "" &&
             formData.district !== "" &&
             formData.province !== "" &&
             formData.previouslyJoined !== "" &&

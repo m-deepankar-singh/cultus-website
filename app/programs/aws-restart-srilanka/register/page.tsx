@@ -4,13 +4,13 @@ import AWSRestartRegisterForm from "./AWSRestartRegisterForm";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Register for AWS re/Start Program in India",
+  title: "Register for AWS re/Start Program in Sri Lanka",
   description:
-    "Apply for the free AWS re/Start program in India. Fill out the registration form to start your cloud computing career with Cultus.",
+    "Apply for the free AWS re/Start program in Sri Lanka. Fill out the registration form to start your cloud computing career with Cultus.",
   openGraph: {
-    title: "Register for AWS re/Start Program in India",
+    title: "Register for AWS re/Start Program in Sri Lanka",
     description:
-      "Apply for the free AWS re/Start program in India. Fill out the registration form to start your cloud computing career with Cultus.",
+      "Apply for the free AWS re/Start program in Sri Lanka. Fill out the registration form to start your cloud computing career with Cultus.",
   },
 };
 
@@ -23,17 +23,17 @@ export default function AWSRestartRegisterPage() {
           __html: JSON.stringify(
             breadcrumbSchema([
               { name: "Programs", href: "/programs" },
-              { name: "AWS re/Start", href: "/programs/aws-restart" },
+              { name: "AWS re/Start", href: "/programs/aws-restart-srilanka" },
               {
                 name: "Register",
-                href: "/programs/aws-restart/register",
+                href: "/programs/aws-restart-srilanka/register",
               },
             ])
           ),
         }}
       />
       <HeroBanner
-        headline="AWS re/Start Program in India"
+        headline="AWS re/Start Program in Sri Lanka"
         subheadline="Apply now to start your free cloud computing training journey with AWS and Cultus."
         ctaText="Fill Out the Form Below"
         ctaHref="#register"
