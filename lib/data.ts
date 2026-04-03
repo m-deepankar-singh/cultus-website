@@ -513,9 +513,11 @@ export const AWS_RESTART_DATA = {
     title: "Who Is This Program For?",
     items: [
       "Those seeking entry-level jobs in Cloud and IT Sector",
-      "Holders of a Diploma or Bachelor Degree",
+      "Youth aged 18–35, including underemployed and unemployed individuals",
+      "Passed Advance Level (A/L) examination (Local or foreign)",
+      "Open to graduates, diploma holders, 12th pass, and planning career change",
       "Available for 3.5 hours of e-classroom learning during day or evening from Monday to Saturday",
-      "1–2 years' work experience, preferably in IT sector is highly recommended",
+      "Work experience, preferably in IT sector is added advantage",
       "Ready to work immediately if offered a job after completing the training",
       "Willing to relocate, if required",
     ],
@@ -523,6 +525,7 @@ export const AWS_RESTART_DATA = {
   requirements: {
     title: "Technical Requirements",
     items: [
+      "Access to Laptop/Desktop",
       "A stable internet connection",
       "Internal/external webcam, mic, and speaker",
       "Intel Processor i3/AMD 3, RAM 4GB, 500 GB hard drive",
