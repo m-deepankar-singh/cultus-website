@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeroBanner from "@/components/sections/HeroBanner";
 import StatsGrid from "@/components/sections/StatsGrid";
 import CTABanner from "@/components/sections/CTABanner";
 import AboutContent from "./AboutContent";
 import { ABOUT_STATS } from "@/lib/data";
 import { breadcrumbSchema } from "@/lib/schema";
+
+const AWARDS = [
+  { src: "/images/awards/Award_2.png", alt: "Award Recognition", width: 495, height: 514 },
+  { src: "/images/awards/ET_Now.png", alt: "ET Now Recognition", width: 390, height: 262 },
+  { src: "/images/awards/Orbit_future.png", alt: "Orbit Future Recognition", width: 387, height: 263 },
+  { src: "/images/awards/orbit_academy.png", alt: "Orbit Academy Recognition", width: 433, height: 262 },
+];
 
 export const metadata: Metadata = {
   title: "About Cultus – Workforce Development Services",
@@ -38,32 +46,47 @@ export default function AboutPage() {
       <StatsGrid stats={ABOUT_STATS} columns={4} background="light" />
 
       {/* Awards section */}
-      <section className="section-shell-tight bg-white section-divider">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white via-bg-light/30 to-white section-divider">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary text-center mb-4 font-display">
             Awards & Recognition
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {Array.from({ length: 8 }).map((_, i) => (
+          <p className="text-text-secondary text-center text-lg mb-16 max-w-2xl mx-auto">
+            Honoured for our commitment to workforce transformation and excellence in skilling
+          </p>
+
+          {/* Featured award - centered */}
+          <div className="mb-8 max-w-md mx-auto">
+            <div className="relative bg-white rounded-2xl overflow-hidden border border-primary/10 shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+              <div className="relative flex items-center justify-center p-8 md:p-10">
+                <Image
+                  src={AWARDS[0].src}
+                  alt={AWARDS[0].alt}
+                  width={AWARDS[0].width}
+                  height={AWARDS[0].height}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom row - 3 landscape awards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {AWARDS.slice(1).map((award) => (
               <div
-                key={i}
-                className="bg-bg-light rounded-xl h-40 flex items-center justify-center border border-primary/10 shadow-[var(--shadow-card)]"
+                key={award.src}
+                className="relative bg-white rounded-2xl overflow-hidden border border-primary/10 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="text-center">
-                  <svg
-                    className="w-10 h-10 text-text-secondary/30 mx-auto mb-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-4.5A3.375 3.375 0 0 0 13.125 12h-2.25A3.375 3.375 0 0 0 7.5 14.25v4.5m6-6V6.75m0 0a2.25 2.25 0 1 0-4.5 0m4.5 0a2.25 2.25 0 1 1-4.5 0"
-                    />
-                  </svg>
-                  <span className="text-xs text-text-secondary/40">Award {i + 1}</span>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3" />
+                <div className="relative w-full">
+                  <Image
+                    src={award.src}
+                    alt={award.alt}
+                    width={award.width}
+                    height={award.height}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             ))}

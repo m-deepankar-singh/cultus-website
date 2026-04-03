@@ -111,7 +111,7 @@ export default function AWSRestartContent() {
               </p>
               <div className="mt-8">
                 <Button href="/programs/aws-restart-srilanka/register#register" size="lg" arrow>
-                  Apply Now
+                  Click Here to Apply Now
                 </Button>
               </div>
             </motion.div>
@@ -486,7 +486,7 @@ export default function AWSRestartContent() {
               arrow
               className="bg-white text-primary hover:bg-white shadow-2xl shadow-black/20"
             >
-              Apply Now
+              Click Here to Apply Now
             </Button>
             <Button
               href="/programs"
