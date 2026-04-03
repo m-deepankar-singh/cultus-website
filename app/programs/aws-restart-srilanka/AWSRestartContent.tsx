@@ -391,64 +391,65 @@ export default function AWSRestartContent() {
             subtitle="Check if you meet the criteria and have the technical setup to join the program."
           />
 
-          {/* Eligibility - full width, highlighted */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="mb-10"
-          >
-            <div className="relative rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/[0.04] via-white to-accent/[0.04] p-8 md:p-10 shadow-lg">
-              <div className="absolute top-0 left-8 -translate-y-1/2">
-                <span className="inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-4 py-1.5 rounded-full shadow-md">
-                  <CheckCircle className="w-4 h-4" />
-                  Eligibility Criteria
-                </span>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-4">
-                {eligibility.items.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <ChevronRight className="w-4 h-4 text-primary" />
-                    </div>
-                    <span className="text-text-body text-sm md:text-base leading-relaxed">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Technical Requirements */}
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="max-w-2xl mx-auto"
-          >
-            <Card className="h-full bg-primary/[0.02]">
-              <h3 className="text-xl font-bold text-primary mb-6">
-                Technical Requirements
-              </h3>
-              <ul className="space-y-4">
-                {requirements.items.map((item, i) => {
-                  const icons = [Laptop, Wifi, Monitor, Cpu];
-                  const ReqIcon = icons[i] || Monitor;
-                  return (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Eligibility - takes 2 columns */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              className="lg:col-span-2"
+            >
+              <div className="relative rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/[0.04] via-white to-accent/[0.04] p-8 md:p-10 shadow-lg h-full">
+                <div className="absolute top-0 left-8 -translate-y-1/2">
+                  <span className="inline-flex items-center gap-2 bg-primary text-white text-sm font-semibold px-4 py-1.5 rounded-full shadow-md">
+                    <CheckCircle className="w-4 h-4" />
+                    Eligibility Criteria
+                  </span>
+                </div>
+                <ul className="space-y-5 mt-4">
+                  {eligibility.items.map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <ReqIcon className="w-5 h-5 text-primary/60 flex-shrink-0 mt-0.5" />
-                      <span className="text-text-body text-sm leading-relaxed">
+                      <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <ChevronRight className="w-4 h-4 text-primary" />
+                      </div>
+                      <span className="text-text-body text-sm md:text-base leading-relaxed">
                         {item}
                       </span>
                     </li>
-                  );
-                })}
-              </ul>
-            </Card>
-          </motion.div>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Technical Requirements - takes 1 column */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <Card className="h-full bg-primary/[0.02]">
+                <h3 className="text-xl font-bold text-primary mb-6">
+                  Technical Requirements
+                </h3>
+                <ul className="space-y-5">
+                  {requirements.items.map((item, i) => {
+                    const icons = [Laptop, Wifi, Monitor, Cpu];
+                    const ReqIcon = icons[i] || Monitor;
+                    return (
+                      <li key={item} className="flex items-start gap-3">
+                        <ReqIcon className="w-5 h-5 text-primary/60 flex-shrink-0 mt-0.5" />
+                        <span className="text-text-body text-sm leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Card>
+            </motion.div>
+          </div>
         </div>
       </section>
 
