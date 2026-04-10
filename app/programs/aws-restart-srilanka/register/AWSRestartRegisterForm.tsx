@@ -115,13 +115,13 @@ export default function AWSRestartRegisterForm() {
         throw new Error(data.error || "Something went wrong");
       }
 
-      setSubmitted(true);
-
       // Facebook Pixel event tracking
       if (typeof window !== "undefined" && typeof window.fbq === "function") {
-        window.fbq("track", "CompleteRegistration");
         window.fbq("track", "Lead");
+        window.fbq("track", "CompleteRegistration");
       }
+
+      setSubmitted(true);
     } catch (err) {
       setError(
         err instanceof Error
