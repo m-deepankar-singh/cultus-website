@@ -1,5 +1,11 @@
 "use client";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -110,6 +116,12 @@ export default function AWSRestartRegisterForm() {
       }
 
       setSubmitted(true);
+
+      // Facebook Pixel event tracking
+      if (typeof window !== "undefined" && typeof window.fbq === "function") {
+        window.fbq("track", "CompleteRegistration");
+        window.fbq("track", "Lead");
+      }
     } catch (err) {
       setError(
         err instanceof Error
