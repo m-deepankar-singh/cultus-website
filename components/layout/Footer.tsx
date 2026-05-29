@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
@@ -23,6 +23,24 @@ const audienceLinks = [
   { label: "For Businesses", href: "/for-businesses" },
   { label: "For Governments", href: "/for-governments" },
   { label: "For Universities", href: "/for-universities" },
+];
+
+const socialLinks = [
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/cultus.workforce/",
+    icon: Instagram,
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61586407862812",
+    icon: Facebook,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://lk.linkedin.com/company/cultus-workforce",
+    icon: Linkedin,
+  },
 ];
 
 export default function Footer() {
@@ -50,6 +68,23 @@ export default function Footer() {
             transforming learners into job-ready talent, skilling them for the
             future and connecting them directly to high-demand careers.
           </p>
+          <div className="mt-6 flex items-center gap-3">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="focus-ring flex items-center justify-center w-9 h-9 rounded-full border border-white/15 text-white/65 hover:text-white hover:border-white/40 hover:bg-white/5 transition-colors duration-200"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              );
+            })}
+          </div>
         </div>
 
         {/* Links grid */}
