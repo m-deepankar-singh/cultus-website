@@ -189,14 +189,14 @@ export default function WebinarContent() {
       <section className="bg-primary-dark">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <p className="border-b border-white/10 py-3 text-center text-sm font-bold uppercase tracking-[0.2em] text-accent">
-            {d.hero.seats}
+            {d.audienceStripTitle}
           </p>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
             variants={staggerContainer}
-            className="grid grid-cols-2 divide-white/10 py-8 sm:grid-cols-3 lg:grid-cols-6 lg:divide-x"
+            className="grid grid-cols-2 divide-white/10 py-8 sm:grid-cols-4 lg:grid-cols-8 lg:divide-x"
           >
             {d.audienceTypes.map((a) => {
               const Icon = getIcon(a.icon);
@@ -302,33 +302,30 @@ export default function WebinarContent() {
         </div>
       </section>
 
-      {/* ===================== WHO SHOULD ATTEND ===================== */}
+      {/* ======================== KEY TAKEAWAYS ======================== */}
       <section className="bg-white py-20 md:py-24">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <CenterHeading lead="Who Should" highlight="Attend?" />
+          <CenterHeading lead="Key" highlight="Takeaways" />
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={viewport}
             variants={staggerContainer}
-            className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {d.whoShouldAttend.map((card) => {
-              const Icon = getIcon(card.icon);
+            {d.keyTakeaways.map((t) => {
+              const Icon = getIcon(t.icon);
               return (
                 <motion.div
-                  key={card.title}
+                  key={t.text}
                   variants={fadeUp}
-                  className="flex flex-col items-center rounded-2xl border border-primary/10 bg-bg-light p-7 text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-30px_rgba(15,45,92,0.4)]"
+                  className="flex items-center gap-4 rounded-2xl border border-primary/10 bg-bg-light p-5 transition-all duration-300 hover:-translate-y-1 hover:border-teal/30 hover:shadow-[0_24px_50px_-30px_rgba(15,45,92,0.4)]"
                 >
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal/10 text-teal">
                     <Icon className="h-6 w-6" strokeWidth={1.75} />
                   </span>
-                  <h3 className="mt-5 text-base font-bold leading-snug text-teal">
-                    {card.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-text-body">
-                    {card.description}
+                  <p className="text-base font-semibold text-primary">
+                    {t.text}
                   </p>
                 </motion.div>
               );
@@ -437,38 +434,6 @@ export default function WebinarContent() {
               ))}
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* ======================== KEY TAKEAWAYS ======================== */}
-      <section className="bg-white py-20 md:py-24">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <CenterHeading lead="Key" highlight="Takeaways" />
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            variants={staggerContainer}
-            className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6"
-          >
-            {d.keyTakeaways.map((t) => {
-              const Icon = getIcon(t.icon);
-              return (
-                <motion.div
-                  key={t.text}
-                  variants={fadeUp}
-                  className="flex flex-col items-center text-center"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal/10 text-teal">
-                    <Icon className="h-6 w-6" strokeWidth={1.75} />
-                  </span>
-                  <p className="mt-4 text-[13px] leading-relaxed text-text-body">
-                    {t.text}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </motion.div>
         </div>
       </section>
 

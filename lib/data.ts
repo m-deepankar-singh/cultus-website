@@ -665,17 +665,20 @@ export const WEBINAR_DATA = {
     seats: "Limited Seats Available",
     image: "/images/assets/Asset 35@2x.png",
   },
+  audienceStripTitle: "Who Should Attend",
   audienceTypes: [
-    { label: "Commercial Banks", icon: "Landmark" },
-    { label: "Development Banks", icon: "Building2" },
-    { label: "Insurance Companies", icon: "Umbrella" },
-    { label: "Leasing Companies", icon: "ScrollText" },
-    { label: "FinTechs", icon: "CircuitBoard" },
-    { label: "Other Financial Institutions", icon: "Briefcase" },
+    { label: "CHROs", icon: "UserCog" },
+    { label: "HR Leaders", icon: "Users" },
+    { label: "L&D Leaders", icon: "GraduationCap" },
+    { label: "Talent Acquisition Teams", icon: "UserPlus" },
+    { label: "Banking Executives", icon: "Landmark" },
+    { label: "Digital Transformation Leaders", icon: "Cpu" },
+    { label: "Operations Heads", icon: "Settings" },
+    { label: "Insurance Leaders", icon: "Umbrella" },
   ],
   whyAttend: {
     intro:
-      "As AI technologies become embedded across banking, financial services, and insurance operations, organizations must ensure that their workforce is equipped with the right skills, mindset, and governance practices.",
+      "AI adoption is accelerating across BFSI. Organizations that invest in workforce readiness today will be better positioned to lead tomorrow.",
     listTitle: "Explore Insights On:",
     items: [
       "Global trends in upskilling and employability within the BFSI sector",
@@ -771,30 +774,12 @@ export const WEBINAR_DATA = {
     ],
   },
   keyTakeaways: [
-    {
-      icon: "BrainCircuit",
-      text: "A deeper understanding of AI's impact on the BFSI workforce",
-    },
-    {
-      icon: "BarChart3",
-      text: "Practical insights into workforce readiness and employability trends",
-    },
-    {
-      icon: "Rocket",
-      text: "Strategies to prepare Gen Z talent for future workplace demands",
-    },
-    {
-      icon: "ShieldCheck",
-      text: "Guidance on responsible AI adoption within regulated industries",
-    },
-    {
-      icon: "Scale",
-      text: "Perspectives on balancing innovation with governance and compliance",
-    },
-    {
-      icon: "Target",
-      text: "Actionable ideas for building future-ready teams",
-    },
+    { icon: "BrainCircuit", text: "AI Readiness in BFSI" },
+    { icon: "Layers", text: "Future Skills Framework" },
+    { icon: "Users", text: "Workforce Transformation" },
+    { icon: "GraduationCap", text: "Reskilling Strategies" },
+    { icon: "ShieldCheck", text: "AI Governance & Ethics" },
+    { icon: "Map", text: "Roadmap for AI Adoption" },
   ],
   reserve: {
     title: "Reserve Your Seat Today",
