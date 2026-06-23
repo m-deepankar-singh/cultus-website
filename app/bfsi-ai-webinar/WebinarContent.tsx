@@ -375,6 +375,17 @@ export default function WebinarContent() {
                   <p className="text-sm text-white/75">
                     {d.speakers.keynote.org}
                   </p>
+                  {d.speakers.keynote.linkedin && (
+                    <a
+                      href={d.speakers.keynote.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-teal-bright transition-colors hover:text-white"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      Connect on LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
               <p className="mt-6 text-sm leading-relaxed text-white/80">
@@ -410,6 +421,17 @@ export default function WebinarContent() {
                     <p className="mt-1 text-xs leading-relaxed text-white/70">
                       {s.title}
                     </p>
+                    {s.linkedin && (
+                      <a
+                        href={s.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-teal-bright transition-colors hover:text-white"
+                      >
+                        <Linkedin className="h-3.5 w-3.5" />
+                        LinkedIn
+                      </a>
+                    )}
                   </div>
                 </motion.div>
               ))}

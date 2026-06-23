@@ -27,8 +27,8 @@ const eventSchema = {
   "@type": "Event",
   name: "Transforming BFSI Talent for the AI Era",
   description: DESCRIPTION,
-  startDate: "2026-07-06T13:00:00+05:30",
-  endDate: "2026-07-06T14:00:00+05:30",
+  startDate: "2026-07-06T15:00:00+05:30",
+  endDate: "2026-07-06T16:00:00+05:30",
   eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
   location: {
