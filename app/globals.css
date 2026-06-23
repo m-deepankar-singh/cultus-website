@@ -26,6 +26,11 @@
   /* Accent - subtle warm accent for CTAs */
   --color-accent: #e8b931;
 
+  /* Teal accent - BFSI webinar landing highlights & CTAs */
+  --color-teal: #1ca59d;
+  --color-teal-bright: #34c2b8;
+  --color-teal-dark: #147c76;
+
   /* Text Colors */
   --color-text-primary: #1b4580;
   --color-text-secondary: #64748b;

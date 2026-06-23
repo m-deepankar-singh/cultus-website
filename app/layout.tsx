@@ -4,6 +4,7 @@ import { Sora } from "next/font/google";
 import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SiteChrome from "@/components/layout/SiteChrome";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -117,9 +118,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${geistSans.variable} ${sora.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <SiteChrome navbar={<Navbar />} footer={<Footer />}>
+          {children}
+        </SiteChrome>
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"

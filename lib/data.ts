@@ -1,4 +1,4 @@
-import type { NavItem, Stat, Program, FAQ, Office, SegmentButton, Testimonial } from "./types";
+import type { NavItem, Stat, Program, FAQ, Office, SegmentButton, Testimonial, EventItem } from "./types";
 
 export const NAV_ITEMS: NavItem[] = [
   {
@@ -21,6 +21,26 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "For Businesses", href: "/for-businesses" },
   { label: "For Governments", href: "/for-governments" },
   { label: "For Universities", href: "/for-universities" },
+  { label: "Events", href: "/events" },
+];
+
+export const EVENTS: EventItem[] = [
+  {
+    title: "Transforming BFSI Talent for the AI Era",
+    eyebrow: "Exclusive Webinar",
+    description:
+      "An exclusive webinar for Banking, Financial Services & Insurance leaders on building agile, AI-ready teams for the future of banking. Hear from industry leaders on workforce readiness, responsible AI adoption, and the human skills that still matter.",
+    date: "6 July 2026",
+    day: "Monday",
+    time: "1:00 PM – 2:00 PM",
+    timezone: "Sri Lanka Time",
+    format: "Live Webinar · Online",
+    image: "/images/assets/Asset 35@2x.png",
+    href: "/bfsi-ai-webinar",
+    ctaText: "View & Register",
+    status: "upcoming",
+    tags: ["BFSI", "AI & Workforce", "Leadership"],
+  },
 ];
 
 export const HOME_STATS: Stat[] = [
@@ -624,3 +644,180 @@ export const BUSINESS_VALUE_PROPS = [
     icon: "Briefcase",
   },
 ];
+
+// BFSI AI-Era Webinar landing page — mirrors the official webinar one-pager
+export const WEBINAR_DATA = {
+  hero: {
+    eyebrow: "Exclusive Webinar for",
+    audience: "Banking, Financial Services & Insurance Leaders",
+    titleLead: "Transforming",
+    titleMid: "BFSI Talent",
+    titleTail: "for the",
+    titleHighlight: "AI Era",
+    subtitle: "Build Agile, AI-Ready Teams for the Future of Banking",
+    date: "6 July 2026",
+    day: "Monday",
+    time: "1:00 PM – 2:00 PM",
+    timezone: "Sri Lanka Time",
+    format: "Live Webinar",
+    formatNote: "Online Event",
+    cta: "Register Now",
+    seats: "Limited Seats Available",
+    image: "/images/assets/Asset 35@2x.png",
+  },
+  audienceTypes: [
+    { label: "Commercial Banks", icon: "Landmark" },
+    { label: "Development Banks", icon: "Building2" },
+    { label: "Insurance Companies", icon: "Umbrella" },
+    { label: "Leasing Companies", icon: "ScrollText" },
+    { label: "FinTechs", icon: "CircuitBoard" },
+    { label: "Other Financial Institutions", icon: "Briefcase" },
+  ],
+  whyAttend: {
+    intro:
+      "As AI technologies become embedded across banking, financial services, and insurance operations, organizations must ensure that their workforce is equipped with the right skills, mindset, and governance practices.",
+    listTitle: "Explore Insights On:",
+    items: [
+      "Global trends in upskilling and employability within the BFSI sector",
+      "Sri Lanka's readiness for an AI-enabled BFSI workforce",
+      "Gen Z + AI: Understanding the future workforce and evolving workplace expectations",
+      "Skills and capabilities required to remain competitive in the AI era",
+      "Frameworks, governance models, and best practices for responsible AI adoption",
+      "Balancing innovation, compliance, risk management, and workforce transformation",
+    ],
+    image: "/images/assets/Asset 34@2x.png",
+  },
+  whatYoullLearn: [
+    {
+      icon: "BrainCircuit",
+      title: "AI's Impact on the BFSI Workforce",
+      description:
+        "Understand how AI is changing job roles, skills, and workforce expectations across banking, financial services, and insurance.",
+    },
+    {
+      icon: "Target",
+      title: "Building an AI-Ready Talent Strategy",
+      description:
+        "Learn how forward-thinking organizations are preparing employees for AI-enabled workplaces.",
+    },
+    {
+      icon: "TrendingUp",
+      title: "Upskilling & Reskilling for the Future",
+      description:
+        "Discover practical approaches to developing critical skills without disrupting business operations.",
+    },
+    {
+      icon: "Workflow",
+      title: "Driving Workforce Agility",
+      description:
+        "Learn how to create adaptable teams capable of navigating continuous change.",
+    },
+    {
+      icon: "Handshake",
+      title: "The Human Skills That Still Matter",
+      description:
+        "Explore why leadership, communication, critical thinking, and adaptability remain essential in an AI-powered world.",
+    },
+  ],
+  whoShouldAttend: [
+    {
+      icon: "Users",
+      title: "HR Leaders",
+      description:
+        "Chief Human Resources Officers, HR Directors, HR Business Partners",
+    },
+    {
+      icon: "GraduationCap",
+      title: "Learning & Development Professionals",
+      description: "Training Managers, L&D Heads, Capability Development Teams",
+    },
+    {
+      icon: "Landmark",
+      title: "BFSI Business Leaders",
+      description:
+        "Banking Executives, Operations Leaders, Digital Transformation Leaders",
+    },
+    {
+      icon: "Briefcase",
+      title: "Talent & Workforce Professionals",
+      description:
+        "Talent Acquisition Leaders, Workforce Planning Teams, Organizational Development Professionals",
+    },
+  ],
+  speakers: {
+    keynote: {
+      name: "Mr. Cyrus Daruwala",
+      badge: "Keynote Speaker",
+      title: "Executive Director - FSI",
+      org: "ASEAN Economic Forum Distinguished Speaker",
+      image: "/images/assets/Asset 21@2x.png",
+      bio: "Mr. Cyrus Daruwala is a globally recognized financial services leader with over 30 years of experience driving transformation across banking, insurance and financial services in Asia, the Middle East and Europe. He is a trusted advisor to banks, regulators and fintechs on strategy, innovation, digital transformation, and AI-led workforce evolution. His deep expertise in financial services, technology and people transformation helps organizations build future-ready, resilient and human-centric workplaces in the age of AI.",
+    },
+    others: [
+      {
+        name: "Mr. Sumudu Gunawardhana",
+        title:
+          "Chief Information Officer, Commercial Bank of Ceylon & Managing Director Crysys Ltd",
+        image: "/images/assets/Asset 20@2x.png",
+      },
+      {
+        name: "Mr. Nalin. K. Singh",
+        title: "Managing Director, Cultus Global",
+        image: "/images/assets/Asset 19@2x.png",
+      },
+    ],
+  },
+  keyTakeaways: [
+    {
+      icon: "BrainCircuit",
+      text: "A deeper understanding of AI's impact on the BFSI workforce",
+    },
+    {
+      icon: "BarChart3",
+      text: "Practical insights into workforce readiness and employability trends",
+    },
+    {
+      icon: "Rocket",
+      text: "Strategies to prepare Gen Z talent for future workplace demands",
+    },
+    {
+      icon: "ShieldCheck",
+      text: "Guidance on responsible AI adoption within regulated industries",
+    },
+    {
+      icon: "Scale",
+      text: "Perspectives on balancing innovation with governance and compliance",
+    },
+    {
+      icon: "Target",
+      text: "Actionable ideas for building future-ready teams",
+    },
+  ],
+  reserve: {
+    title: "Reserve Your Seat Today",
+    body: "The future of BFSI belongs to organizations that invest in people as much as technology. Join this exclusive webinar and discover how leading organizations are preparing their workforce for the AI era.",
+    cta: "Register Now",
+    seats: "Limited Seats Available",
+  },
+  about: {
+    title: "About Cultus Workforce",
+    body: "Cultus Workforce helps organizations build future-ready talent through workforce transformation, capability development, leadership training, and AI readiness programs.",
+    missionLabel: "Our mission is simple:",
+    mission: "Empower people. Strengthen organizations. Enable future growth.",
+    closing:
+      "We work with organizations across industries to create agile, skilled, and high-performing workforces prepared for the demands of tomorrow.",
+    image: "/images/assets/Asset 32@2x.png",
+    features: [
+      { icon: "Users", label: "Workforce Transformation Experts" },
+      { icon: "BrainCircuit", label: "AI Readiness Programs" },
+      { icon: "GraduationCap", label: "Leadership Development" },
+      { icon: "Rocket", label: "Future-Ready Talent Solutions" },
+    ],
+  },
+  contact: {
+    email: "info@cultusworkforce.com",
+    phone: "+94 71 964 1642",
+    linkedinLabel: "Cultus Workforce",
+    linkedinUrl: "https://lk.linkedin.com/company/cultus-workforce",
+  },
+};

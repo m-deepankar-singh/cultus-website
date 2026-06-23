@@ -40,3 +40,19 @@ export interface SegmentButton {
   href: string;
   icon: string;
 }
+
+export interface EventItem {
+  title: string;
+  eyebrow: string;
+  description: string;
+  date: string;
+  day: string;
+  time: string;
+  timezone: string;
+  format: string;
+  image: string;
+  href: string;
+  ctaText: string;
+  status: "upcoming" | "past";
+  tags: string[];
+}
