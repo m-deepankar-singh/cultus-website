@@ -759,6 +759,13 @@ export const WEBINAR_DATA = {
     },
     others: [
       {
+        name: "Mr. Alexandre Fernandes De Oliveira",
+        title:
+          "Chief Investment Officer, Manufacturing, Agribusiness & Services, East Asia & Pacific — IFC, World Bank Group",
+        image: "/images/Alexandre Oliveira.png",
+        linkedin: "https://www.linkedin.com/in/alexandre-oliveira-b4785125/",
+      },
+      {
         name: "Mr. Sumudu Gunawardhana",
         title:
           "Chief Information Officer, Commercial Bank of Ceylon & Managing Director Crysys Ltd",
